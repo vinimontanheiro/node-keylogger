@@ -1,10 +1,6 @@
 const EventEmitter = require('events');
-const path = require('path');
-
-
-const version = `node-v72-${process.platform}-${process.arch}`;
-let NodeHookAddon = require(`./platforms/${version}/build/Release/iohook.node`);
-
+const version = `node-v64-${process.platform}-${process.arch}`;
+let NodeHookAddon = __non_webpack_require__(`./platforms/${version}/build/Release/iohook.node`);
 
 const events = {
   3: 'keypress',

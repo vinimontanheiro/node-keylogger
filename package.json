@@ -24,16 +24,13 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/register": "^7.7.4",
     "babel-loader": "^8.0.6",
-    "binary-loader": "^0.0.1",
     "copy-webpack-plugin": "^5.0.5",
     "nexe": "^3.3.2",
-    "node-addon-loader": "^0.0.6",
-    "node-loader": "^0.6.0",
-    "webpack-node-externals": "^1.7.2"
+    "node-loader": "^0.6.0"
   },
   "iohook": {
     "targets": [
-      "node-72"
+      "node-64"
     ],
     "platforms": [
       "win32",

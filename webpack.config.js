@@ -1,13 +1,12 @@
 
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const nodeExternals = require('webpack-node-externals')
 
 require('@babel/register');
 
  module.exports = {
   target: "node",
-  mode:"development",
+  mode:"production",
   entry: {
     app: ["./bin.js"]
   },
@@ -26,5 +25,9 @@ require('@babel/register');
       },
     ]
   },
-  externals: [nodeExternals()]
+  plugins: [
+    new CopyPlugin([
+      { from: './node_modules/iohook/builds', to: 'platforms' },
+    ]),
+  ],
  }
